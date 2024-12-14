@@ -1,0 +1,314 @@
+/* General styles */
+body {
+    background-color: #f9f9f9; /* Light background for the page */
+    color: #000; /* Black text */
+    margin: 0;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #000; /* Black background */
+    height: 80px; /* Height of the header (2 cm less) */
+    display: flex;
+    align-items: center;
+    color: #fff; /* White text */
+}
+
+/* Logo styles */
+.logo {
+    margin-left: 10px; /* Move the logo closer to the left side */
+    margin-top: 50px; /* Moves the logo down by approximately 2 cm */
+}
+
+.logo-image {
+    height: 80px; /* Increased height of the logo */
+}
+
+/* Navigation tabs */
+nav {
+    background-color: #000; /* Black background for tabs */
+    padding: 5px 0; /* Reduced padding */
+    flex-grow: 1; /* Allow nav to take available space */
+}
+
+nav .tabs {
+    display: flex;
+    justify-content: center; /* Center align tabs */
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove margin to center properly */
+}
+
+nav .tabs li {
+    margin: 0 10px; /* Spacing between tabs */
+}
+
+nav .tabs a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav .tabs a:hover {
+    background-color: #555; /* Background color on hover */
+}
+
+/* Section styles */
+section, footer {
+    padding: 60px 0; /* Adequate spacing for sections */
+}
+
+.container {
+    max-width: 900px;
+    padding: 0 1rem; /* Add padding to the sides */
+    margin-left: 210px; /* Adjust this value as needed to move content left */
+}
+
+/* גודל לכותרות */
+h2 {
+    font-size: 55px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+/* גודל לטקסט רגיל */
+p, a, li {
+    font-size: 20px;
+}
+
+
+
+
+
+/* Thumbnail styles */
+
+
+/* סגנונות למבנה הפרויקטים */
+#thumbs {
+    display: flex;
+    flex-wrap: wrap; /* מאפשר לפריטים לעבור לשורה הבאה אם אין מקום */
+    gap: 20px; /* רווח בין הפריטים */
+    justify-content: center; /* מרכז את הפרויקטים */
+    list-style: none; /* מסיר עיגולי רשימה */
+    padding: 0;
+    margin: 0;
+}
+
+.thumb {
+    position: relative;
+    display: flex;
+    flex: 1 1 500px; /* קובע רוחב בסיסי של 300px לכל פרויקט */
+    max-width: 500px; /* רוחב מרבי */
+    overflow: hidden; /* מונע גלישה מחוץ למיכל */
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: auto; /* שמירת פרופורציות */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* אפקט הגדלה בריחוף */
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-text {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.thumb:hover .hover-overlay {
+    opacity: 1;
+}
+
+.thumb:hover .project-thumbnail {
+    transform: scale(1.05); /* הגדלה עדינה בריחוף */
+}
+
+
+
+
+
+
+/* עיצוב מכולת הסרטונים */
+.hobby-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* אפקט של גדילה בריחוף */
+.video-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+video {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.text-container {
+    width: 50%;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+/*  עיצוב לסרטון שלי */
+
+
+
+
+
+.about-content {
+    display: flex;
+    align-items: flex-start; /* מיישר את התוכן למעלה */
+    gap: 200px; /* רווח בין הטקסט לסרטון */
+    flex-direction: row; /* מסדר את הטקסט בצד שמאל והסרטון בצד ימין */
+}
+
+
+.video-hadar {
+    width: 400px; /* גודל הסרטון */
+    height: auto;
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* הצללה לסרטון */
+    transition: transform 0.3s, box-shadow 0.3s; /* אפקט בעת ריחוף */
+}
+
+/* אפקט הפעלת הסרטון בריחוף */
+.video-hadar:hover {
+    transform: scale(1.05); /* הגדלת הסרטון קלות */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* הצללה חזקה יותר */
+}
+
+
+
+
+
+
+
+
+/* עיצוב לשורת האייקונים */
+.social-icons {
+    position: absolute; /* ממקם את האייקונים יחסית למסך */
+    top: 73px; /* מיקום מלמעלה */
+    right: 80px; /* מיקום מצד ימין */
+    display: flex;
+    gap: 15px;
+}
+
+/* סגנון בסיסי לאייקונים */
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease; /* מעבר חלק להגדלה */
+}
+
+/* אפקט הגדלה בריחוף */
+.social-icons a:hover img {
+    transform: scale(1.2); /* הגדלת האייקון */
+}
+
+/* טקסט בעת לחיצה על אחד התחביבים */
+
+#hobbies {
+    margin: 20px 0;
+}
+
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.hobby-videos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-container {
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.video-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text-container {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.text-container h1 {
+    font-size: 18px;
+    color: #333;
+}
+
+.text-container p {
+    font-size: 14px;
+    color: #666;
+}
+
+#dynamic-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

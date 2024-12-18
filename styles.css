@@ -67,34 +67,31 @@ section, footer {
     margin-left: 210px; /* Adjust this value as needed to move content left */
 }
 
-/* גודל לכותרות */
+/* Gdal for titles */
 h2 {
     font-size: 55px;
     font-weight: bold;
 }
+
 h3 {
     font-size: 30px;
     font-weight: bold;
 }
-/* גודל לטקסט רגיל */
+
+/* Font size for normal text */
 p, a, li {
     font-size: 20px;
 }
 
-
-
-
-
 /* Thumbnail styles */
 
-
-/* סגנונות למבנה הפרויקטים */
+/* Styles for the project structure */
 #thumbs {
     display: flex;
-    flex-wrap: wrap; /* מאפשר לפריטים לעבור לשורה הבאה אם אין מקום */
-    gap: 20px; /* רווח בין הפריטים */
-    justify-content: center; /* מרכז את הפרויקטים */
-    list-style: none; /* מסיר עיגולי רשימה */
+    flex-wrap: wrap; /* allows items to wrap to the next line if there's no space */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Centers the projects */
+    list-style: none; /* Removes list circles */
     padding: 0;
     margin: 0;
 }
@@ -102,16 +99,16 @@ p, a, li {
 .thumb {
     position: relative;
     display: flex;
-    flex: 1 1 500px; /* קובע רוחב בסיסי של 300px לכל פרויקט */
-    max-width: 500px; /* רוחב מרבי */
-    overflow: hidden; /* מונע גלישה מחוץ למיכל */
+    flex: 1 1 500px; /* Sets base width of 300px for each project */
+    max-width: 500px; /* Maximum width */
+    overflow: hidden; /* Prevents overflow */
 }
 
 .project-thumbnail {
     width: 100%;
-    height: auto; /* שמירת פרופורציות */
+    height: auto; /* Keeps proportions */
     object-fit: cover;
-    transition: transform 0.3s ease; /* אפקט הגדלה בריחוף */
+    transition: transform 0.3s ease; /* Zoom effect on hover */
 }
 
 .hover-overlay {
@@ -139,15 +136,10 @@ p, a, li {
 }
 
 .thumb:hover .project-thumbnail {
-    transform: scale(1.05); /* הגדלה עדינה בריחוף */
+    transform: scale(1.05); /* Gentle zoom on hover */
 }
 
-
-
-
-
-
-/* עיצוב מכולת הסרטונים */
+/* Styles for the video container */
 .hobby-videos {
     display: flex;
     flex-wrap: wrap;
@@ -173,7 +165,7 @@ p, a, li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* אפקט של גדילה בריחוף */
+/* Hover effect */
 .video-container:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -187,8 +179,6 @@ video {
     transition: transform 0.3s ease;
 }
 
-
-
 .text-container {
     width: 50%;
     font-size: 14px;
@@ -196,119 +186,116 @@ video {
     line-height: 1.6;
 }
 
-
-
-
-
-
-
-/*  עיצוב לסרטון שלי */
-
-
-
-
-
+/* About section */
 .about-content {
     display: flex;
-    align-items: flex-start; /* מיישר את התוכן למעלה */
-    gap: 200px; /* רווח בין הטקסט לסרטון */
-    flex-direction: row; /* מסדר את הטקסט בצד שמאל והסרטון בצד ימין */
+    align-items: flex-start; /* Aligns content to top */
+    gap: 200px; /* Space between text and video */
+    flex-direction: row; /* Places text on left and video on right */
 }
-
 
 .video-hadar {
-    width: 400px; /* גודל הסרטון */
+    width: 400px; /* Video size */
     height: auto;
-    border-radius: 10px; /* פינות מעוגלות */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* הצללה לסרטון */
-    transition: transform 0.3s, box-shadow 0.3s; /* אפקט בעת ריחוף */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for video */
+    transition: transform 0.3s, box-shadow 0.3s; /* Effect on hover */
 }
 
-/* אפקט הפעלת הסרטון בריחוף */
 .video-hadar:hover {
-    transform: scale(1.05); /* הגדלת הסרטון קלות */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* הצללה חזקה יותר */
+    transform: scale(1.05); /* Slight video zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
 }
 
-
-
-
-
-
-
-
-/* עיצוב לשורת האייקונים */
+/* Social icons positioning */
 .social-icons {
-    position: absolute; /* ממקם את האייקונים יחסית למסך */
-    top: 73px; /* מיקום מלמעלה */
-    right: 80px; /* מיקום מצד ימין */
+    position: absolute;
+    top: 73px; /* Position from top */
+    right: 80px; /* Position from right */
     display: flex;
     gap: 15px;
 }
 
-/* סגנון בסיסי לאייקונים */
+/* Icon styles */
 .social-icons a img {
     width: 40px;
     height: 40px;
-    transition: transform 0.3s ease; /* מעבר חלק להגדלה */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
-/* אפקט הגדלה בריחוף */
 .social-icons a:hover img {
-    transform: scale(1.2); /* הגדלת האייקון */
+    transform: scale(1.2); /* Zoom icon on hover */
 }
 
-/* טקסט בעת לחיצה על אחד התחביבים */
-
-#hobbies {
-    margin: 20px 0;
+/* Footer styles */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding */
+    margin-top: 50px; /* Top margin */
 }
 
-.container {
-    text-align: center;
-    font-family: Arial, sans-serif;
+/* Footer icon styles */
+.footer-content .icons img {
+    width: 30px; /* Smaller width */
+    height: 30px; /* Smaller height */
+    gap: 50px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
-.hobby-videos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.footer-content .icons a:hover img {
+    transform: scale(1.2); /* Zoom icon on hover */
 }
 
-.video-container {
-    width: 250px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    background: #f9f9f9;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
+/* Media Queries for responsiveness */
 
-.video-container:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-left: 0; /* Remove left margin */
+        padding: 0 1rem;
+    }
 
-.text-container {
-    margin-top: 10px;
-    text-align: left;
-}
+    header {
+        height: 60px; /* Reduce header height */
+    }
 
-.text-container h1 {
-    font-size: 18px;
-    color: #333;
-}
+    .logo-image {
+        height: 60px; /* Adjust logo size */
+    }
 
-.text-container p {
-    font-size: 14px;
-    color: #666;
-}
+    .about-content {
+        flex-direction: column; /* Stack text and video */
+        gap: 20px;
+    }
 
-#dynamic-text {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+    .video-hadar {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .video-container {
+        width: 100%; /* Full width of video container */
+    }
+
+    .hobby-videos {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav .tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        align-items: center;
+    }
+
+    nav .tabs li {
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        position: static; /* Move social icons below */
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+    }
 }

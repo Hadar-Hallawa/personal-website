@@ -4,11 +4,13 @@ body {
     color: #000; /* Black text */
     margin: 0;
     line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo', sans-serif;
 }
+
 
 /* Header styles */
 header {
+	  width: 100%;
     background-color: #000; /* Black background */
     height: 80px; /* Height of the header (2 cm less) */
     display: flex;
@@ -16,10 +18,12 @@ header {
     color: #fff; /* White text */
 }
 
+
+
 /* Logo styles */
 .logo {
-    margin-left: 10px; /* Move the logo closer to the left side */
-    margin-top: 50px; /* Moves the logo down by approximately 2 cm */
+    margin-left:-700px; /* Move the logo closer to the left side */
+    margin-top: 60px; /* Moves the logo down by approximately 2 cm */
 }
 
 .logo-image {
@@ -49,11 +53,13 @@ nav .tabs a {
     color: #fff; /* White text */
     text-decoration: none;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+    display: inline-block; /* Ensure the element can scale properly */
 }
 
 nav .tabs a:hover {
-    background-color: #555; /* Background color on hover */
+    transform: scale(1.3); /* Zoom effect on hover */
+   
 }
 
 /* Section styles */
@@ -61,11 +67,15 @@ section, footer {
     padding: 60px 0; /* Adequate spacing for sections */
 }
 
+
+
 .container {
     max-width: 900px;
     padding: 0 1rem; /* Add padding to the sides */
-    margin-left: 210px; /* Adjust this value as needed to move content left */
+    margin: 0 auto; /* Centers the container */
 }
+
+
 
 /* Gdal for titles */
 h2 {
@@ -81,6 +91,13 @@ h3 {
 /* Font size for normal text */
 p, a, li {
     font-size: 20px;
+	
+}
+
+
+/* Highlight the word 'me' */
+.highlight {
+    color: orange; /* Set the color to orange */
 }
 
 /* Thumbnail styles */
@@ -198,7 +215,7 @@ video {
     width: 400px; /* Video size */
     height: auto;
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for video */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  Shadow for video */
     transition: transform 0.3s, box-shadow 0.3s; /* Effect on hover */
 }
 
@@ -247,6 +264,89 @@ footer {
 .footer-content .icons a:hover img {
     transform: scale(1.2); /* Zoom icon on hover */
 }
+footer a {
+    text-decoration: none; /* מסיר את הקו תחתון מהקישורים */
+}
+
+
+/* עיצוב לתיכנות 8*/
+#programming {
+  
+    padding: 50px 0;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 70px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background-color: #f0f0f0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 3px solid orange; /* גבול כתום */
+    transition: transform 0.3s ease;
+    height: 180px; /* גובה אחיד */
+    width: 180px; /* רוחב אחיד */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 22px; /* גודל כתב גדול יותר */
+    font-weight: 600;
+    color: #333;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/*שינוי גודל וצבע כתב של תחביבים בלחיצת כפתור */
+
+.extra-text {
+    font-size: 16px;
+    color: #333; /* Default text color */
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    font-weight: bold; /* Make the text bold */
+}
+
+.extra-text.active {
+    display: block; /* Show when active */
+}
+
+.extra-text.orange {
+    color: orange; /* Text color for specific part */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Queries for responsiveness */
 
@@ -298,4 +398,93 @@ footer {
         right: 0;
         margin-top: 20px;
     }
+	    .hobby-videos {
+        flex-direction: column; /* Stack the items vertically */
+        gap: 20px; /* Space between each item */
+    }
+
+    .video-container {
+        flex: 0 1 100%; /* Take up the full width */
+        max-width: 100%; /* Ensure the container doesn't overflow */
+    }
+
+    .video-container video {
+        width: 100%; /* Make the video fill the container */
+    }
+
+    .text-container {
+        width: 100%; /* Make the text container fill the width */
+    }
+
 }
+
+
+
+/* Hide the hamburger menu on desktop */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Show hamburger menu on mobile devices */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul.show {
+        display: flex;
+    }
+	 header {
+        height: 60px; /* גובה הכותרת קטן יותר */
+    }
+
+    .logo-image {
+        height: 60px; /* גודל לוגו קטן יותר */
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-top: 10px; /* התאמת מיקום הלוגו */
+    }
+
+    nav .tabs {
+        flex-direction: column; /* כרטיסיות בערימה אנכית */
+        align-items: center;
+    }
+
+    nav .tabs li {
+        margin: 10px 0;
+    }
+
+    #thumbs {
+        flex-direction: column; /* פרויקטים בערימה אנכית */
+        align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column; /* תוכן מיושר אנכית */
+        gap: 20px;
+    }
+
+    .video-hadar {
+        width: 100%; /* גודל מלא של הווידאו */
+    }
+
+    .hobby-videos {
+        flex-direction: column; /* וידאו בתחביבים בערימה אנכית */
+    }
+
+    .social-icons {
+        position: static; /* הזזת אייקונים חברתיים */
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+

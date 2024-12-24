@@ -55,3 +55,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+//התאמה למסכים קטנים
+/*
+function toggleMenu() {
+    const menu = document.querySelector('.tabs');
+    const isSmallScreen = window.innerWidth <= 600;
+
+    if (isSmallScreen) {
+        menu.classList.toggle('show');
+    }
+}
+*/
+
+
+function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.toggle('show');
+}
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.video-container').forEach(container => {
+        container.addEventListener('click', () => {
+            const extraText = container.getAttribute('data-extra-text');
+            const textContainer = container.querySelector('.text-container');
+            const video = container.querySelector('.hobby-video');
+            
+            if (container.classList.contains('expanded')) {
+                // Restore original content
+                video.style.display = 'block';
+                textContainer.style.display = 'block';
+                textContainer.innerHTML = container.dataset.originalContent;
+                container.classList.remove('expanded');
+            } else {
+                // Save original content
+                if (!container.dataset.originalContent) {
+                    container.dataset.originalContent = textContainer.innerHTML;
+                }
+                // Replace content
+                video.style.display = 'none';
+                textContainer.style.display = 'block';
+                textContainer.innerHTML = `<p>${extraText}</p>`;
+                container.classList.add('expanded');
+            }
+        });
+    });
+});

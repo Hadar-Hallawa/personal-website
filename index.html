@@ -7,43 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hadar Hallawa</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="./media/hadar.png" alt="Your Logo" class="logo-image"> 
-            </div>
-            <!-- Hamburger Icon (Only visible on mobile) -->
-            <div class="hamburger" onclick="toggleMenu()">
-                &#9776;
-            </div>
+    
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="./media/hadar.png" alt="Your Logo" class="logo-image">
         </div>
-    </header> 
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
 
-    <nav>
-        <ul class="tabs">
-            <li><a href="#about">About</a></li>
-            <li><a href="#programming">Programming</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <div class="social-icons">
-                <!-- LinkedIn Icon -->
-                <a href="https://www.linkedin.com/in/hadar-hallawa-563173286" target="_blank">
-                    <img src="./media/link.png" alt="LinkedIn">
-                </a>
-                <!-- GitHub Icon -->
-                <a href="https://github.com/Hadar-Hallawa" target="_blank">
-                    <img src="./media/GIT.png" alt="GitHub">
-                </a>
-                <!-- Email Icon -->
-                <a href="mailto:hadarhal19@gmail.com">
-                    <img src="./media/EMAIL.png" alt="Email">
-                </a>
-            </div>
-        </ul>
-    </nav>
+<nav id="mainNav" class="nav-closed">
+    <ul class="tabs">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programming">Programming</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/hadar-hallawa-563173286" target="_blank">
+                <img src="./media/link.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Hadar-Hallawa" target="_blank">
+                <img src="./media/GIT.png" alt="GitHub">
+            </a>
+            <a href="mailto:hadarhal19@gmail.com">
+                <img src="./media/EMAIL.png" alt="Email">
+            </a>
+        </div>
+    </ul>
+</nav>
 
 <script src="script.js"></script>
 

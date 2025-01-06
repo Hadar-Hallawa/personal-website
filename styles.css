@@ -210,6 +210,7 @@ video {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  Shadow for video */
     transition: transform 0.3s, box-shadow 0.3s; /* Effect on hover */
+	margin-top: -40px
 }
 
 .video-hadar:hover {
@@ -218,16 +219,6 @@ video {
 }
 
 
-/* Icon styles */
-.social-icons a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-}
-
-.social-icons a:hover img {
-    transform: scale(1.2); /* Zoom icon on hover */
-}
 
 /* Footer styles */
 footer {
@@ -252,6 +243,14 @@ footer {
 footer a {
     text-decoration: none; /* מסיר את הקו תחתון מהקישורים */
 }
+/* קו מפריד בין הטאבים לשאר התוכן */
+.footer-divider {
+    border-top: 1px solid #fff; /* White divider line */
+    width: 50%; /* הגדרת רוחב הקו המפריד ל-50% מהפוטר */
+    margin: 20px auto; /* Margin מעל ומתחת, align ל-center */
+}
+
+
 
 
 /* עיצוב לתיכנות 8*/
@@ -404,13 +403,23 @@ nav .tabs a:hover {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-
 /* Social icons */
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2); /* Zoom icon on hover */
+}
+
+
 .social-icons {
     display: flex;
     gap: 15px;
     position: static;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 /* Media Queries */
@@ -527,7 +536,7 @@ nav .tabs a:hover {
     }
 	
     .logo-image {
-        height: 35px;
+        height: 50px;
     }
     
     header .container {

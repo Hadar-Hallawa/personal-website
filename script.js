@@ -116,3 +116,14 @@ document.addEventListener('click', (e) => {
         hamburger.classList.remove('active');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("mobile-video");
+
+    // בדיקת רוחב מסך
+    if (window.innerWidth <= 768) {
+        video.autoplay = true; // הפעלה אוטומטית בנייד
+        video.play();
+    }
+});
+

@@ -208,9 +208,9 @@ video {
     width: 400px; /* Video size */
     height: auto;
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  Shadow for video */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
     transition: transform 0.3s, box-shadow 0.3s; /* Effect on hover */
-	margin-top: -40px
+    margin-top: -80px
 }
 
 .video-hadar:hover {

@@ -118,12 +118,16 @@ document.addEventListener('click', (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("mobile-video");
+    const videos = document.querySelectorAll("video"); // בוחר את כל הסרטונים בדף
 
     // בדיקת רוחב מסך
     if (window.innerWidth <= 768) {
-        video.autoplay = true; // הפעלה אוטומטית בנייד
-        video.play();
+        videos.forEach(video => {
+            video.muted = true; // ווידאו חייב להיות מושתק כדי לאפשר autoplay
+            video.autoplay = true;
+            video.play().catch((error) => {
+                console.error("Failed to autoplay video:", error);
+            });
+        });
     }
 });
-
